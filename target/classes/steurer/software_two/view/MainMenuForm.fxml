@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="steurer.software_two.controller.MainMenuController">
+   <children>
+      <VBox alignment="TOP_CENTER" layoutX="100.0" layoutY="7.0" prefHeight="700.0" prefWidth="700.0" spacing="20.0">
+         <children>
+            <Label fx:id="mainMenuTitle" text="Main Menu">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+            <VBox alignment="TOP_CENTER" prefHeight="250.0" prefWidth="700.0" style="-fx-border-color: black; -fx-border-radius: 15; -fx-background-radius: 15">
+               <children>
+                  <HBox prefHeight="50.0" prefWidth="200.0">
+                     <children>
+                        <Label fx:id="customersLbl" text="Customers">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <TableView fx:id="customerTableView" prefHeight="200.0" prefWidth="200.0">
+                    <columns>
+                       <TableColumn fx:id="customerNameCol" prefWidth="108.0" text="C1" />
+                       <TableColumn fx:id="customerAddressCol" prefWidth="108.0" text="C2" />
+                       <TableColumn fx:id="customerZipCol" prefWidth="108.0" text="C2" />
+                       <TableColumn fx:id="customerPhoneCol" prefWidth="108.0" text="C2" />
+                       <TableColumn fx:id="customerCountryCol" prefWidth="108.0" text="C2" />
+                       <TableColumn fx:id="customerDivisionCol" prefWidth="108.0" text="C2" />
+                    </columns>
+                  </TableView>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+                     <children>
+                        <Button fx:id="addCustomerBtn" mnemonicParsing="false" onAction="#onActionAddCustomerBtn" prefWidth="150.0" text="Add Customer" />
+                        <Button fx:id="modifyCustomerBtn" mnemonicParsing="false" onAction="#onActionModifyCustomerBtn" prefWidth="150.0" text="Modify Customer" />
+                        <Button fx:id="deleteCustomerBtn" mnemonicParsing="false" onAction="#onActionDeleteCustomerBtn" prefWidth="150.0" text="Delete Customer" />
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets left="25.0" right="25.0" />
+               </padding>
+            </VBox>
+            <VBox alignment="TOP_CENTER" prefHeight="250.0" prefWidth="700.0" style="-fx-border-color: black; -fx-border-radius: 15; -fx-background-radius: 15">
+               <children>
+                  <HBox prefHeight="50.0" prefWidth="700.0" spacing="300.0">
+                     <children>
+                        <Label fx:id="appointmentsLbl" text="Appointments">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="20.0">
+                           <children>
+                              <RadioButton fx:id="allRBtn" mnemonicParsing="false" onAction="#onActionAllRBtn" text="All">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="group" />
+                                 </toggleGroup>
+                              </RadioButton>
+                              <RadioButton fx:id="weekRBtn" mnemonicParsing="false" onAction="#onActionWeekRBtn" text="Week" toggleGroup="$group" />
+                              <RadioButton fx:id="monthRBtn" mnemonicParsing="false" onAction="#onActionMonthRBtn" text="Month" toggleGroup="$group" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <TableView fx:id="appointmentTableView" prefHeight="200.0" prefWidth="200.0">
+                     <columns>
+                        <TableColumn fx:id="appointmentIDCol" prefWidth="64.8" text="C1" />
+                        <TableColumn fx:id="appointmentTitleCol" prefWidth="64.8" text="C2" />
+                        <TableColumn fx:id="appointmentDescriptionCol" prefWidth="64.8" text="C2" />
+                        <TableColumn fx:id="appointmentLocationCol" prefWidth="64.8" text="C2" />
+                        <TableColumn fx:id="appointmentContactIDCol" prefWidth="64.8" text="C2" />
+                        <TableColumn fx:id="appointmentTypeCol" prefWidth="64.8" text="C2" />
+                        <TableColumn fx:id="appointmentStartCol" prefWidth="64.8" text="C2" />
+                        <TableColumn fx:id="appointmentEndCol" prefWidth="64.8" text="C2" />
+                        <TableColumn fx:id="appointmentCustomerID" prefWidth="64.8" text="C2" />
+                        <TableColumn fx:id="appointmentUserID" prefWidth="64.8" text="C2" />
+                     </columns>
+                  </TableView>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+                     <children>
+                        <Button fx:id="addAppointmentBtn" mnemonicParsing="false" onAction="#onActionAddAppointmentBtn" prefWidth="150.0" text="Add Appointment" />
+                        <Button fx:id="modifyAppointmentBtn" mnemonicParsing="false" onAction="#onActionModifyAppointmentBtn" prefWidth="150.0" text="Modify Appointment" />
+                        <Button fx:id="deleteAppointmentBtn" mnemonicParsing="false" onAction="#onActionDeleteAppointmentBtn" prefWidth="150.0" text="Delete Appointment" />
+                     </children></HBox>
+               </children>
+               <padding>
+                  <Insets left="25.0" right="25.0" />
+               </padding>
+            </VBox>
+            <VBox alignment="TOP_CENTER" prefHeight="80.0" prefWidth="100.0" style="-fx-border-color: black; -fx-border-radius: 15; -fx-background-radius: 15">
+               <children>
+                  <Label fx:id="reportsLbl" text="Reports">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+                     <children>
+                        <Button fx:id="customerReportBtn" mnemonicParsing="false" onAction="#onActionCustomerReportBtn" prefWidth="150.0" text="All Customers" />
+                        <Button fx:id="appointmentReportBtn" mnemonicParsing="false" onAction="#onActionAppointmentReportBtn" prefWidth="150.0" text="All Appointments" />
+                        <Button fx:id="contactReportBtn" mnemonicParsing="false" onAction="#onActionContactReportBtn" prefWidth="150.0" text="Contact Schedule" />
+                     </children></HBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
