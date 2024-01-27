@@ -1,20 +1,12 @@
 package steurer.software_two;
 
 import javafx.application.Application;
-import javafx.beans.Observable;
-import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import steurer.software_two.DAO.*;
-import steurer.software_two.model.*;
+import steurer.software_two.DAO.JDBC;
 
 import java.io.IOException;
-import java.time.ZoneId;
-import java.util.Locale;
-import java.util.ResourceBundle;
-
-import static javafx.application.Application.launch;
 
 public class MainApplication extends Application {
     @Override
