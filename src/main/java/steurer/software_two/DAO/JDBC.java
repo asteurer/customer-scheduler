@@ -12,8 +12,7 @@ public class JDBC {
 
     private static final String protocol = "jdbc";
     private static final String vendor = ":mysql:";
-    // This was "//localhost/"
-    private static final String location = "//wgu-software-two.cppfrnv5lgkv.us-east-1.rds.amazonaws.com/";
+    private static final String location = "//localhost/";
     private static final String databaseName = "client_schedule";
     private static final String jdbcURL = protocol + vendor + location + databaseName + "?connectionTimeZone = SERVER"; // local
     private static final String driver = "com.mysql.cj.jdbc.Driver";
