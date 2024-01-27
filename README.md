@@ -1,7 +1,7 @@
 # Customer Scheduler
 
 This manages and tracks customer appointments for a fictional company. Created for a 
-course project at Western Governors University
+course project at Western Governors University.
 
 ## Description
 
